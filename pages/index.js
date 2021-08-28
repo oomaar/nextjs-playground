@@ -1,5 +1,4 @@
 import { GlobalStyle, HeadTag } from "../Global";
-import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 import { Main } from "../Global/styles/styledIndexPage";
 import { NotesFeed } from "../components";
