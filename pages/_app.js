@@ -1,1 +1,9 @@
-export default function App({ Component, pageProps }) { return <Component {...pageProps} /> }
+import { Layout } from "../Global";
+
+export default function App({ Component, pageProps }) {
+    return (
+        <Layout>
+            <Component {...pageProps} />
+        </Layout>
+    );
+};

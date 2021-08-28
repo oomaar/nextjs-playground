@@ -7,7 +7,9 @@ export default function Home() {
       <HeadTag />
       <GlobalStyle />
 
-      <Navbar />
+      <main>
+        NotesFeed
+      </main>
     </div>
   );
 };
