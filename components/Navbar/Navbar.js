@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
     Nav,
     Logo,
@@ -7,8 +8,12 @@ import {
 export const Navbar = () => {
     return (
         <Nav>
-            <Logo>NoteApp</Logo>
-            <Button href="#">Create Note</Button>
+            <Link href="/">
+                <Logo>NoteApp</Logo>
+            </Link>
+            <Link href="/new">
+                <Button href="#">Create Note</Button>
+            </Link>
         </Nav>
     );
 };
