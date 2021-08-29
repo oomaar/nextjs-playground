@@ -1,4 +1,4 @@
-import { GlobalStyle, HeadTag } from "../Global";
+import { HeadTag } from "../Global";
 import fetch from "isomorphic-unfetch";
 import { Main } from "../Global/styles/styledIndexPage";
 import { NotesFeed } from "../components";
@@ -7,7 +7,6 @@ export default function Home({ notes }) {
   return (
     <div>
       <HeadTag />
-      <GlobalStyle />
 
       <Main>
         <NotesFeed notes={notes} />
