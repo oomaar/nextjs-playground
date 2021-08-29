@@ -20,33 +20,17 @@ export const Nav = styled.nav`
 export const Logo = styled.h1`
   margin: 0;
   padding: 0;
-  font-size: 3rem;
   cursor: pointer;
-
-  @media screen and (max-width: 280px) {
-    font-size: 1.5rem;
-  }
-
-  @media screen and (max-width: 567px) {
-    font-size: 1.8rem;
-  }
+  font-size: clamp(1.5rem, 3vw, 3rem);
 `;
 
 export const Button = styled.a`
   text-decoration: none;
   color: #fff;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 2vw, 2rem);
   
   :hover {
     text-decoration: underline;
-  }
-
-  @media screen and (max-width: 280px) {
-    font-size: 1.2rem;
-  }
-
-  @media screen and (max-width: 567px) {
-    font-size: 1.5rem;
   }
 `;
