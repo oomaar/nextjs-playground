@@ -6,13 +6,10 @@ import {
 } from "../../Global/styles/styledNotePage";
 
 const Note = ({ note }) => {
-    const [confirm, setConfirm] = useState(false);
     const [isDeleting, setIsDeleting] = useState(false);
     const router = useRouter();
 
-    // const open = () => setConfirm(true);
-    // const close = () => setConfirm(false);
-    const handleDelete = async () => {
+    const handleDelete = () => {
         setIsDeleting(true);
     };
 
@@ -46,11 +43,6 @@ const Note = ({ note }) => {
                     <button onClick={handleDelete}>Delete</button>
                 </div>
             )}
-            {/* <div
-                open={confirm}
-                onCancel={close}
-                onConfirm={handleDelete}
-            /> */}
         </Container>
     );
 };
