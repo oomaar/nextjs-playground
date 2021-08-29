@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import fetch from 'isomorphic-unfetch';
 import { Main } from "../../Global/styles/styledIndexPage";
 import { HeadTag } from "../../Global";
+import { setTextareaHeight } from "../../utils/setTextareaHeight";
 import {
     Container,
     SubContainer,
@@ -69,12 +70,20 @@ const EditNote = ({ note }) => {
         setIsSubmit(true);
     };
 
-    const handleChange = e => {
+    const handleChangeTextArea = e => {
         setForm({
             ...form,
             [e.target.name]: e.target.value
-        })
+        });
         e.preventDefault();
+        setTextareaHeight(e, "150px");
+    };
+
+    const handleChangeInput = e => {
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value
+        });
     };
 
     return (
@@ -93,7 +102,7 @@ const EditNote = ({ note }) => {
                                 <Input
                                     label="Title"
                                     name="title"
-                                    onChange={handleChange}
+                                    onChange={handleChangeInput}
                                     required
                                     value={form.title}
                                 />
@@ -102,7 +111,7 @@ const EditNote = ({ note }) => {
                                 <Label>Description</Label>
                                 <TextArea
                                     name="description"
-                                    onChange={handleChange}
+                                    onChange={handleChangeTextArea}
                                     required
                                     value={form.description}
                                 />

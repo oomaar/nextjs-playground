@@ -53,6 +53,10 @@ export const TextArea = styled.textarea`
   font-size: 1.2rem;
   height: 150px;
 
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   @media screen and (max-width: 280px) {
     padding: 0.5rem;
   }
