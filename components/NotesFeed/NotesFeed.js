@@ -8,18 +8,19 @@ import {
 } from "./styledNotesFeed";
 
 export const NotesFeed = ({ notes }) => {
+    console.log("🚀 ~ file: NotesFeed.js ~ line 11 ~ NotesFeed ~ notes", notes)
     return (
         <Container>
             {notes.map(note => (
                 <Card key={note._id}>
-                    <Link href={`${note.id}`}>
+                    <Link href={`${note._id}`}>
                         <Title>{note.title}</Title>
                     </Link>
                     <Description>{note.description}</Description>
-                    <Link href={`${note.id}`}>
+                    <Link href={`${note._id}`}>
                         <Button>View</Button>
                     </Link>
-                    <Link href={`${note.id}/edit`}>
+                    <Link href={`${note._id}/edit`}>
                         <Button>Edit</Button>
                     </Link>
                 </Card>
