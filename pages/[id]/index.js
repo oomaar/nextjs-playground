@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import {
     Container,
+    SubContainer,
+    Title,
+    Description,
+    DeleteButton,
 } from "../../Global/styles/styledNotePage";
 
 const Note = ({ note }) => {
@@ -35,13 +39,13 @@ const Note = ({ note }) => {
     return (
         <Container>
             {isDeleting ? (
-                <h1>Loading</h1>
+                <Title>Loading</Title>
             ) : (
-                <div>
-                    <h1>{note.title}</h1>
-                    <p>{note.description}</p>
-                    <button onClick={handleDelete}>Delete</button>
-                </div>
+                <SubContainer>
+                    <Title>{note.title}</Title>
+                    <Description>{note.description}</Description>
+                    <DeleteButton onClick={handleDelete}>Delete</DeleteButton>
+                </SubContainer>
             )}
         </Container>
     );
