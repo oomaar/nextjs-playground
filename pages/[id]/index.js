@@ -55,7 +55,7 @@ export default Note;
 
 // destructure context object
 Note.getInitialProps = async ({ query: { id } }) => {
-    const link = `http://localhost:3000/api/notes/${id}` || `https://next-noteapp.vercel.app/api/notes/${id}`;
+    const link = `http://localhost:3000/api/notes/${id}` || `https://next-noteapp-nine.vercel.app/api/notes/${id}`;
     const res = await fetch(`${link}`);
     const { data } = await res.json();
 

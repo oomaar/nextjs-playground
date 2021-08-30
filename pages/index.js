@@ -16,7 +16,7 @@ export default function Home({ notes }) {
 };
 
 Home.getInitialProps = async () => {
-  const link = `http://localhost:3000/api/notes` || `https://next-noteapp-djklfelo2-oomaar.vercel.app/api/notes`;
+  const link = `http://localhost:3000/api/notes` || `https://next-noteapp-nine.vercel.app/api/notes`;
   const res = await fetch(`${link}`);
   const { data } = await res.json();
 
