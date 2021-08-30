@@ -126,7 +126,7 @@ const EditNote = ({ note }) => {
 };
 
 EditNote.getInitialProps = async ({ query: { id } }) => {
-    const link = `http://localhost:3000/api/notes/${id}` || `https://next-noteapp.vercel.app/api/notes/${id}`;
+    const link = `http://localhost:3000/api/notes/${id}` || `https://next-noteapp-djklfelo2-oomaar.vercel.app/${id}`;
     const res = await fetch(`${link}`);
     const { data } = await res.json();
 
